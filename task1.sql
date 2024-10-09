@@ -3,13 +3,13 @@ SELECT
     COUNT(mutres.idMutationResult) AS somMutCount
 FROM
     Patient patient
-JOIN
+INNER JOIN
     `Case` case_ ON patient.patientId = case_.patientId
-JOIN
+INNER JOIN
     Barcode barcode ON case_.caseId = barcode.caseId
-JOIN
+INNER JOIN
     Analysis analysis ON barcode.barcodeId = analysis.barcodeId
-JOIN
+INNER JOIN
     MutationResult mutres ON analysis.analysisName = mutres.Analysis_analysisName
 WHERE 1=1
     AND mutres.zygosity = 'somatic'
