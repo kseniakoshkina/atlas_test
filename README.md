@@ -1,4 +1,9 @@
 # Atlas Test Task
+
+```bash
+pip install -r requirements.txt
+```
+
 ## msi_finder.py
 usage for the microsatellite stability analysis (returns Stable or Unstable):
 ```bash
