@@ -15,7 +15,7 @@ DO
 
   SET @dup_count = (SELECT COUNT(*) FROM duplicates);
 
-  DELETE analysis FROM Analysis analysis
+  DELETE analys FROM Analysis analys
   INNER JOIN duplicates dups ON analysis.analysisName = dups.analysisName;
 
   INSERT INTO log_table (log_date, log_message)
