@@ -16,7 +16,7 @@ DO
   SET @dup_count = (SELECT COUNT(*) FROM duplicates);
 
   DELETE analys FROM Analysis analys
-  INNER JOIN duplicates dups ON analysis.analysisName = dups.analysisName;
+  INNER JOIN duplicates dups ON analys.analysisName = dups.analysisName;
 
   INSERT INTO log_table (log_date, log_message)
   VALUES (NOW(), CONCAT('Удалено ', @dup_count, ' дубликатов из таблицы Analysis'));
