@@ -8,7 +8,7 @@ INNER JOIN
 INNER JOIN
     Barcode barcode ON case_.caseId = barcode.caseId
 INNER JOIN
-    Analysis analysis ON barcode.barcodeId = analysis.barcodeId
+    Analysis analysis ON barcode.barcodeName = analysis.barcodeName
 INNER JOIN
     MutationResult mutres ON analysis.analysisName = mutres.Analysis_analysisName
 WHERE 1=1
